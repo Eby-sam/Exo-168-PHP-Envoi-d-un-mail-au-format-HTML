@@ -9,7 +9,7 @@
 
 $to = [
     'j.conan@fondationface.org',
-    ...
+    'coquelet.samuel@gmail.com'
 ];
 
 $html = '
@@ -19,9 +19,23 @@ $html = '
         </head>
         <body>
             <div>
-                <!-- Vos actualités ici -->
+                si ça marche pas je hurle
+                sinon ba je hurle pas :)
             </div>
         </body>
     </html>
 ';
+
+
+$headers = array(
+    "Reply-To" => "coquelet.samuel@gmail.com",
+    "X-Mailer" => "PHP/".phpversion(),
+    "Mime-Version" => "1.0",
+    "Content-type" => "text/html; charset=utf-8"
+);
+mail((string)$to, "test", $html, $headers, "-f coquelet.samuel@gmail.com");
+
+
+
+
 
